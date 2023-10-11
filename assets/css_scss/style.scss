@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway";
+}
+
+body {
+    overflow: hidden;
+    user-select: none;
+}
+
+.nav {            //SETTINGS NAV MAX. 599PX !
+    background-color: #5B84B1FF;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title h1{
+        display: none;
+    }
+
+    .title::before{
+        content: "JS";
+        font-weight: 600;
+        font-size: 2rem;
+        margin-left: 10px;
+        color: yellow;
+    }
+
+    .title::after{
+        content: "Counter";
+        font-weight: 600;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .icons {
+        margin-right: 10px;
+        margin-left: 10px;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+            padding: 5px;
+        }
+    }
+
+    //MEDIA QUERIES SETTINGS NAV MIN. 600PX
+    @media only screen and (min-width: 601px) {
+        justify-content: space-between;
+
+        .title::before{
+            display: none;
+        }
+    
+        .title::after{
+            display: none;
+        }
+
+        .title h1{
+            display: block;
+            font-weight: 600;
+            font-size: 2.3rem;
+            margin-left: 10px;
+            color: white;
+        }
+
+        .icons {
+            a {
+                font-size: 1.8rem;
+                padding: 5px;
+            }
+        }
+    }
+    
+    //MEDIA QUERIES SETTINGS NAV MIN. 850PX
+    @media only screen and (min-width: 850px) {
+
+        .title h1{
+            font-size: 3rem;
+            margin-left: 15px;
+        }
+
+        .icons {
+            a {
+                font-size: 2.5rem;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+.parents {            //SETTINGS PARENTS MAX. 400PX !
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    text-align: center;
+    flex-direction: column;
+
+    img{
+        z-index: -10;
+        width: 500%;
+        position: absolute;
+        position: fixed;
+        bottom: 0%;
+        left: -10%;
+    }
+
+    //MEDIA QUERIES SETTINGS PARENTS MIN. 500PX
+    @media only screen and (min-width: 500px) {
+        img{
+            width: 225%;
+        }
+    }
+
+    //MEDIA QUERIES SETTINGS PARENTS MIN. 850PX
+    @media only screen and (min-width: 850px) {
+        img{
+            left: 0%;
+            width: 135%;
+        }
+    }
+
+    .children {           //SETTINGS CHILDREN MAX. 500PX !
+        display: flex;
+        flex-direction: column;
+
+        .add-one {
+            height: 115px;
+            width: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            font-size: 3rem;
+            background-color: #5B84B1FF;
+            border-bottom-right-radius: 30vh;
+            border-bottom-left-radius: 50vh;
+            color: white;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .add-one:active{
+            font-size: 2.3rem;
+        }
+
+        .number-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 130px;
+            font-weight: 900;
+            font-size: 3rem;
+            font-weight: bold;
+            background-color: #FC766AFF;
+            color: white;
+            user-select: none;
+        }
+
+        .subtract-one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            font-size: 3rem;
+            width: 130px;
+            height: 115px;
+            background-color: #5B84B1FF;
+            border-top-right-radius: 50vh;
+            border-top-left-radius: 30vh;
+            color: white;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .subtract-one:active{
+            font-size: 2.3rem;
+        }
+
+        //MEDIA QUERIES SETTINGS CHILDREN MIN. 500PX
+        @media only screen and (min-width: 501px) {
+            flex-direction: row;
+
+            .add-one {
+                height: 150px;
+                width: 100px;
+                font-size: 4rem;
+                border-top-right-radius: 10vh;
+                border-bottom-left-radius: 0vh;
+            }
+
+            .add-one:active{
+                font-size: 2.8rem;
+            }
+
+            .number-display {
+                height: 150px;
+                width: 310px;
+                font-size: 5rem;
+            }
+
+            .subtract-one {
+                height: 150px;
+                width: 100px;
+                font-size: 4rem;
+                border-top-right-radius: 0vh;
+                border-bottom-left-radius: 10vh;
+            }
+
+            .subtract-one:active{
+                font-size: 2.8rem;
+            }
+
+        }
+
+        //MEDIA QUERIES SETTINGS CHILDREN MIN. 850PX
+        @media only screen and (min-width: 850px) {
+            .add-one {
+                height: 200px;
+                width: 150px;
+                border-top-right-radius: 10vh;
+                border-bottom-left-radius: 0vh;
+                font-size: 5rem;
+            }
+
+            .add-one:active{
+                font-size: 4.8rem;
+            }
+
+            .number-display {
+                height: 200px;
+                width: 400px;
+                font-size: 6rem;
+            }
+
+            .subtract-one {
+                height: 200px;
+                width: 150px;
+                border-top-right-radius: 0vh;
+                border-bottom-left-radius: 10vh;
+                font-size: 5rem;
+            }
+
+            .subtract-one:active{
+                font-size: 4.8rem;
+            }
+        }
+    
+    }
+}
+
+.button {              //SETTINGS BUTTON MAX. 500PX !
+    display: flex;
+
+    .auto {
+        font-weight: 400;
+        position: absolute;
+        background-color: #FC766AFF;
+        bottom: 5%;
+        left: 10%;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5vh;
+        user-select: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    .canc {
+        font-weight: 400;
+        position: absolute;
+        background-color: #FC766AFF;
+        bottom: 5%;
+        right: 10%;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5vh;
+        user-select: none;
+        cursor: pointer;
+        color: white;
+
+    }
+
+    //MEDIA QUERIES SETTINGS BUTTON MIN. 500PX
+    @media only screen and (min-width: 501px) {
+        display: flex;
+
+        .auto {
+            bottom: 5%;
+            left: 20%;
+            font-size: 1.5rem;
+        }
+
+        .canc {
+            bottom: 5%;
+            right: 20%;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.alert{          //SETTINGS ALERT MIN. 500PX !
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FC766AFF;
+    color: white;
+    text-align: center;
+    width: 40vh;
+    height: 15vh;
+    display: none;
+
+    i{
+        font-size: 40px;
+    }
+    p{
+        font-size: 30px;
+    }
+
+    //MEDIA QUERIES SETTINGS ALERT MAX. 500PX
+    @media only screen and (max-width: 500px) {
+        top: 58%;
+        width: 15vh;
+        
+        i{
+            font-size: 25px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+    }
+}
