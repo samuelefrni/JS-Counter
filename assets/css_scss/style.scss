@@ -8,6 +8,9 @@
 body {
     overflow: hidden;
     user-select: none;
+    @media only screen and (min-width: 600px) {
+        overflow: auto;
+    }
 }
 
 .nav {            //SETTINGS NAV MAX. 599PX !
@@ -161,6 +164,21 @@ body {
             background-color: #FC766AFF;
             color: white;
             user-select: none;
+
+            .alert{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #FC766AFF;
+                color: white;
+            
+                i{
+                    font-size: 25px;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
         }
 
         .subtract-one {
@@ -203,6 +221,16 @@ body {
                 height: 150px;
                 width: 310px;
                 font-size: 5rem;
+
+                .alert{
+                
+                    i{
+                        font-size: 35px;
+                    }
+                    p{
+                        font-size: 50px;
+                    }
+                }
             }
 
             .subtract-one {
@@ -237,6 +265,16 @@ body {
                 height: 200px;
                 width: 400px;
                 font-size: 6rem;
+
+                .alert{
+                
+                    i{
+                        font-size: 40px;
+                    }
+                    p{
+                        font-size: 35px;
+                    }
+                }
             }
 
             .subtract-one {
@@ -301,40 +339,6 @@ body {
             bottom: 5%;
             right: 20%;
             font-size: 1.5rem;
-        }
-    }
-}
-
-.alert{          //SETTINGS ALERT MIN. 500PX !
-    position: fixed;
-    top: 57%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #FC766AFF;
-    color: white;
-    text-align: center;
-    width: 40vh;
-    height: 15vh;
-    display: none;
-
-    i{
-        font-size: 40px;
-    }
-    p{
-        font-size: 30px;
-    }
-
-    //MEDIA QUERIES SETTINGS ALERT MAX. 500PX
-    @media only screen and (max-width: 500px) {
-        top: 58%;
-        width: 15vh;
-        
-        i{
-            font-size: 25px;
-        }
-
-        p{
-            font-size: 15px;
         }
     }
 }

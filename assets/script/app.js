@@ -3,7 +3,6 @@ const displayNumber = document.querySelector("[data-value-display]");
 const addButton = document.querySelector("[data-value-add]");
 const autoButton = document.querySelector("[data-value-auto]");
 const cancButton = document.querySelector("[data-value-canc]");
-const alertt = document.querySelector("[data-value-alert]");
 
 subtractButton.textContent = "-";
 addButton.textContent = "+";
@@ -11,11 +10,13 @@ displayNumber.textContent = "0";
 autoButton.textContent = "AUTO";
 cancButton.textContent = "RESET";
 
+
 class Counter {
     constructor(){
         this.contatore = 0;
         this.autoRunning = false;
         this.interval = null;
+        this.alertElementExist = false;
     }
 
     subtract(){
@@ -31,10 +32,17 @@ class Counter {
                 displayNumber.textContent = this.contatore;
             }else{
                 setTimeout(() => {
-                    alertt.style.display = "block";
+                    displayNumber.textContent = "";
+                    const alertElement = document.createElement("div");
+                    alertElement.classList.add("alert");
+                    alertElement.innerHTML = `<p><i class="fa fa-exclamation-triangle"></i><br>"Auto" in progress...</p>`;
+                    displayNumber.appendChild(alertElement);
+                    this.alertElementExist = true;
                     setTimeout(() => {
-                        alertt.style.display = "none";
-                    }, 1000);
+                        displayNumber.textContent = this.contatore;
+                        alertElement.style.display = "none";
+                        this.alertElementExist = false;
+                    }, 2000);
                 }, 0);
                 return;
             }
@@ -54,10 +62,17 @@ class Counter {
                 displayNumber.textContent = this.contatore;
             }else{
                 setTimeout(() => {
-                    alertt.style.display = "block";
+                    displayNumber.textContent = "";
+                    const alertElement = document.createElement("div");
+                    alertElement.classList.add("alert");
+                    alertElement.innerHTML = `<p><i class="fa fa-exclamation-triangle"></i><br>"Auto" in progress...</p>`;
+                    displayNumber.appendChild(alertElement);
+                    this.alertElementExist = true;
                     setTimeout(() => {
-                        alertt.style.display = "none";
-                    }, 1000);
+                        displayNumber.textContent = this.contatore;
+                        alertElement.style.display = "none";
+                        this.alertElementExist = false;
+                    }, 2000);
                 }, 0);
                 return;
             }
@@ -74,8 +89,12 @@ class Counter {
                 }else if(window.innerWidth < 500 && this.contatore > 998){
                     displayNumber.textContent = "Stop!";
                 }else{
-                    this.contatore++;
-                    displayNumber.textContent = this.contatore;
+                    if(this.alertElementExist == false){
+                        this.contatore++;
+                        displayNumber.textContent = this.contatore;
+                    }else{
+                        this.contatore++;
+                    }
                 }
             }, 1000);
             autoButton.textContent = "STOP";
@@ -90,7 +109,7 @@ class Counter {
     canc(){
         clearInterval(this.interval);
         this.contatore = 0;
-        displayNumber.textContent = 0;
+        displayNumber.textContent = "0";
     }
 
 }
