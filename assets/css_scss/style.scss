@@ -10,9 +10,9 @@ body {
     user-select: none;
 }
 
-.nav {            //SETTINGS NAV MAX. 599PX !
+.nav {            //SETTINGS NAV MAX. 850PX !
     background-color: #5B84B1FF;
-    height: 15vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,32 +24,29 @@ body {
     .title::before{
         content: "JS";
         font-weight: 600;
-        font-size: 2rem;
-        margin-left: 10px;
+        font-size: 2.5rem;
         color: yellow;
     }
 
     .title::after{
         content: "Counter";
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: white;
     }
 
     .icons {
-        margin-right: 10px;
-        margin-left: 10px;
         a {
             text-decoration: none;
             cursor: pointer;
             color: white;
-            font-size: 1.5rem;
-            padding: 5px;
+            font-size: 2.5rem;
+            padding: 10px;
         }
     }
 
-    //MEDIA QUERIES SETTINGS NAV MIN. 600PX
-    @media only screen and (min-width: 601px) {
+    //MEDIA QUERIES SETTINGS NAV MIN. 850PX
+    @media only screen and (min-width: 850px) {
         justify-content: space-between;
 
         .title::before{
@@ -60,33 +57,18 @@ body {
             display: none;
         }
 
+
         .title h1{
             display: block;
             font-weight: 600;
-            font-size: 2.3rem;
-            margin-left: 10px;
-            color: white;
-        }
-
-        .icons {
-            a {
-                font-size: 1.8rem;
-                padding: 5px;
-            }
-        }
-    }
-    
-    //MEDIA QUERIES SETTINGS NAV MIN. 850PX
-    @media only screen and (min-width: 850px) {
-
-        .title h1{
             font-size: 3rem;
-            margin-left: 15px;
+            color: white;
+            padding: 10px;
         }
 
         .icons {
             a {
-                font-size: 2.5rem;
+                font-size: 3rem;
                 padding: 20px;
             }
         }
@@ -95,16 +77,15 @@ body {
 
 .parents {            //SETTINGS PARENTS MAX. 400PX !
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 85vh;
+    justify-content: center;
+    height: 80vh;
     text-align: center;
     flex-direction: column;
 
     img{
         z-index: -10;
         width: 500%;
-        position: absolute;
         position: fixed;
         bottom: 0%;
         left: -10%;
@@ -166,7 +147,7 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: black;
+                background-color: #FC766AFF;
                 color: white;
                 height: 15vh;
                 width: 15vh;
@@ -224,7 +205,7 @@ body {
                 .alert{
                     width: 30vh;
                     i{
-                        font-size: 35px;
+                        font-size: 30px;
                     }
                     p{
                         font-size: 25px;
@@ -269,10 +250,10 @@ body {
                     width: 40vh;
                     height: 20vh;
                     i{
-                        font-size: 50px;
+                        font-size: 40px;
                     }
                     p{
-                        font-size: 40px;
+                        font-size: 35px;
                     }
                 }
             }
