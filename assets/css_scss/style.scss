@@ -10,7 +10,7 @@ body {
     user-select: none;
 }
 
-.nav {            //SETTINGS NAV MAX. 850PX !
+.nav {            //MAX. 850PX !
     background-color: #5B84B1FF;
     height: 20vh;
     display: flex;
@@ -45,7 +45,7 @@ body {
         }
     }
 
-    //MEDIA QUERIES SETTINGS NAV MIN. 850PX
+    //MIN. 850PX
     @media only screen and (min-width: 850px) {
         justify-content: space-between;
 
@@ -75,11 +75,10 @@ body {
     }
 }
 
-.parents {            //SETTINGS PARENTS MAX. 400PX !
+.parents {            //MAX. 400PX !
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    height: 50vh;
+    margin-top: 60px;
     text-align: center;
     flex-direction: column;
 
@@ -90,13 +89,15 @@ body {
         bottom: 0%;
         left: -10%;
     }
-    //MEDIA QUERIES SETTINGS PARENTS MIN. 500PX
+
+    //MIN. 500PX
     @media only screen and (min-width: 500px){
         margin-top: 0;
+        height: 80vh;
         justify-content: center;
     }
 
-    //MEDIA QUERIES SETTINGS PARENTS MIN. 850PX
+    //MIN. 850PX
     @media only screen and (min-width: 850px) {
         img{
             left: 0%;
@@ -104,7 +105,7 @@ body {
         }
     }
 
-    .children {           //SETTINGS CHILDREN MAX. 500PX !
+    .children {           //MAX. 500PX !
         display: flex;
         flex-direction: column;
 
@@ -180,7 +181,7 @@ body {
             font-size: 2.3rem;
         }
 
-        //MEDIA QUERIES SETTINGS CHILDREN MIN. 500PX
+        //MIN. 500PX
         @media only screen and (min-width: 501px) {
             flex-direction: row;
 
@@ -226,7 +227,7 @@ body {
 
         }
 
-        //MEDIA QUERIES SETTINGS CHILDREN MIN. 850PX
+        //MIN. 850PX
         @media only screen and (min-width: 850px) {
             .add-one {
                 height: 200px;
@@ -273,7 +274,7 @@ body {
     }
 }
 
-.button {              //SETTINGS BUTTON MAX. 500PX !
+.button {              //MAX. 500PX !
     display: flex;
 
     .auto {
@@ -305,7 +306,7 @@ body {
 
     }
 
-    //MEDIA QUERIES SETTINGS BUTTON MIN. 500PX
+    // MIN. 500PX
     @media only screen and (min-width: 501px) {
         display: flex;
 
