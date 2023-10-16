@@ -1,14 +1,30 @@
-const subtractButton = document.querySelector("[data-value-subtract]");
-const displayNumber = document.querySelector("[data-value-display]");
-const addButton = document.querySelector("[data-value-add]");
-const autoButton = document.querySelector("[data-value-auto]");
-const cancButton = document.querySelector("[data-value-canc]");
+const parentContainer = document.querySelector("[data-value-parent]"); //MAIN PARENT
+const buttonContainer = document.querySelector("[data-value-button]"); //MAIN BUTTON
 
+const subtractButton = document.createElement("div"); //CREATE SUBTRACT BUTTON
+subtractButton.classList.add("subtract-one");
 subtractButton.textContent = "-";
-addButton.textContent = "+";
+parentContainer.appendChild(subtractButton);
+
+const displayNumber = document.createElement("div"); // CREATE DISPLAY NUMBER 
+displayNumber.classList.add("number-display");
 displayNumber.textContent = "0";
+parentContainer.appendChild(displayNumber);
+
+const addButton = document.createElement("div"); // CREATE ADD ONE BUTTON
+addButton.classList.add("add-one");
+addButton.textContent = "+";
+parentContainer.appendChild(addButton);
+
+const autoButton = document.createElement("div"); // CREATE AUTO BUTTON
+autoButton.classList.add("auto");
 autoButton.textContent = "AUTO";
+buttonContainer.appendChild(autoButton);
+
+const cancButton = document.createElement("div"); // CREATE RESET BUTTON
+cancButton.classList.add("canc");
 cancButton.textContent = "RESET";
+buttonContainer.appendChild(cancButton);
 
 
 class Counter {
